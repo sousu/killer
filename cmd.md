@@ -1,14 +1,19 @@
 
 ## Reconnaissance
 
+ホスト確認
+
+    nmap -sn [address]/24
+
 ポート確認
 
-    nmap -v -p- -sV -sT -Pn [HOST]
+    nmap -v -p 1-65535 -sV -sT -Pn [HOST]
     nmap -v -A [HOST]
 
 Webサーバ
 
     nikto -h [HOST]
+    dirb http://XXX.com/
 
 状態確認
 
