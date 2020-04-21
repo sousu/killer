@@ -17,7 +17,7 @@ Nmap Scripting Engine
     /usr/share/nmap/scripts #スクリプト所在
     nmap --script=smb-enum-* -p139,445 [address] #Samba
 
-Webサーバ https://github.com/maurosoria/dirsearch
+Webサーバ／[dirsearch](https://github.com/maurosoria/dirsearch)
 
     nikto -h [HOST]
     dirb http://XXX.com/
