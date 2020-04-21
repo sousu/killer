@@ -45,7 +45,8 @@ Samba
 
     smbclient //[address]/[dir] -U [user]
 
-[SQL Injection Authentication Bypass Cheat Sheet](https://exploit.linuxsec.org/sql-injection-authentication-bypass-cheat-sheet/)
+[SQL Injection Cheat Sheet](https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/)
+
 
 ## Delivery
 
