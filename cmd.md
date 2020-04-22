@@ -61,8 +61,8 @@ Samba
 
 wpscan
 
-   wpscan -e u --url http://dc-2/ 
-   wpscan --url http://dc-2/ -U ./ulist -P ./plist
+    wpscan -e u --url http://dc-2/ 
+    wpscan --url http://dc-2/ -U ./ulist -P ./plist
 
 
 [CeWL: Custom Word List Generator](https://github.com/digininja/CeWL)
