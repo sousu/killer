@@ -1,4 +1,4 @@
-🐻 Kioptrix#1/#2/#3/#4 DC-1
+🐻 Kioptrix#1/#2/#3/#4 DC-1/DC-2
 
 ## Reconnaissance
 
