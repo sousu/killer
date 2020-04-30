@@ -23,6 +23,10 @@ Webサーバ／[dirsearch](https://github.com/maurosoria/dirsearch)
     dirb http://XXX.com/
     python3 dirsearch.py -u http://XXX.com -e * -x 403,404
 
+curl
+
+    curl http://ip/login.php -XPOST -d 'username=aaa&password=bbb' 
+
 状態確認
 
     uname -a
@@ -70,6 +74,10 @@ wpscan
 
     bundle install --path vendor/bundle
     bundle exec ./cewl.rb http://XXX/ -w passlist
+
+[vanhauser-thc/thc-hydra: hydra](https://github.com/vanhauser-thc/thc-hydra)
+
+    hydra -v -L users -P passwords ssh://10.110...
 
 
 ## Delivery
